@@ -166,6 +166,32 @@ class FakeTextDataGenerator(object):
             background_img = background_generator.quasicrystal(
                 background_height, background_width
             )
+
+        elif background_type == 10:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=248, _var = 4
+            )
+        elif background_type == 11:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=245, _var = 5
+            )
+        elif background_type == 12:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=242, _var = 6
+            )
+        elif background_type == 13:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=239, _var = 7
+            )
+        elif background_type == 14:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=236, _var = 8
+            )
+        elif background_type == 15:
+            background_img = background_generator.gaussian_noise(
+                background_height, background_width, _mean=233, _var = 9
+            )
+
         else:
             background_img = background_generator.image(
                 background_height, background_width, image_dir

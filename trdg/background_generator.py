@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 
-def gaussian_noise(height, width):
+def gaussian_noise(height, width, _mean = 240, _var = 10 ):
     """
         Create a background with Gaussian noise (to mimic paper)
     """
@@ -16,7 +16,7 @@ def gaussian_noise(height, width):
     image = np.ones((height, width)) * 255
 
     # We add gaussian noise
-    cv2.randn(image, 235, 10)
+    cv2.randn(image, _mean, _var)
 
     return Image.fromarray(image).convert("RGBA")
 
