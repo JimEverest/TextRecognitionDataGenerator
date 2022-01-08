@@ -7,6 +7,9 @@ import string
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./trdg")))
 # comment for test!
+
+# 1. commit
+# 2. push
 try:
     os.mkdir("tests/out")
 except:
